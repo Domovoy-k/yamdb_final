@@ -1,5 +1,6 @@
 import random
 
+from api.filters import TitleFilter
 from django.core.mail import EmailMessage
 from django.db import IntegrityError
 from django.db.models import Avg
@@ -12,8 +13,6 @@ from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
 from rest_framework_simplejwt.tokens import AccessToken
-
-from api.filters import TitleFilter
 from reviews.models import (CONFIRMATION_CODE_LENGTH, Category, Genre, Review,
                             Title, User)
 
